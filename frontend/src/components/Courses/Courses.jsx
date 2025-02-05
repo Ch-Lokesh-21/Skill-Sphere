@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import Card from "./Card";
 import { server } from "../../main";
@@ -32,7 +32,7 @@ function Courses() {
         <span>Available Courses</span>
         <button
           onClick={() => navigate("/addCourse")} // Navigate to CreateCourse component
-          className="bg-black text-white text-lg px-3 py-1 rounded"
+          className="bg-black text-white text-lg px-3 py-1 rounded cursor-pointer"
         >
           Create course
         </button>

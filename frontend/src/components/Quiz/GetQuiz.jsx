@@ -59,32 +59,40 @@ function GetQuiz() {
       {quizData ? (
         <form onSubmit={handleSubmit}>
           {quizData.questions.map((question, index) => (
-            <div key={question._id} className="mb-6">
+            <div key={question._id} className="mb-6 p-10 drop-shadow-2xl bg-gray-100 rounded-2xl">
               <h2 className="text-xl font-semibold">{index + 1}. {question.questionText}</h2>
               <div className="space-y-3">
                 {question.options.map((option, idx) => (
-                  <label key={idx} className="block">
-                    <input
+
+                  <div key={idx} className="flex items-center gap-2 mt-4">
+                  <label key={idx} className="cursor-pointer flex items-center gap-2 text-lg">
+                  <input
+                      className="cursor-pointer"
                       type="radio"
                       name={`question-${question._id}`}
                       value={option}
                       checked={answers[question._id] === option}
                       onChange={() => handleAnswerChange(question._id, option)}
-                      className="mr-2"
                     />
                     {option}
                   </label>
+                  
+                  </div>
+
+                  
                 ))}
               </div>
             </div>
           ))}
-
+          <div className="flex justify-center">
           <button
             type="submit"
-            className="bg-black text-white px-4 py-2 rounded mt-6"
+            className="bg-black text-white px-4 py-2 rounded mt-6 cursor-pointer"
           >
             Submit Quiz
           </button>
+          </div>
+          
         </form>
       ) : (
         <p className="text-center text-gray-500">No quiz available</p>

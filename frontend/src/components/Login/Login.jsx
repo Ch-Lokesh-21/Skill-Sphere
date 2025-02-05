@@ -21,7 +21,7 @@ function Login() {
 
       setTimeout(() => navigate("/courses"), 2000);
     } catch (error) {
-      alert("Invalid Credentials or Server Error");
+      alert("Invalid Credentials or Server Error",error);
     }
   };
 
@@ -69,7 +69,7 @@ function Login() {
             </button>
           </form>
           <p className="text-center mt-4">
-            Don't have an account? <a href="/signup" className="text-blue-500">Register</a>
+            {"Don't have an account?"} <a href="/signup" className="text-blue-500">Register</a>
           </p>
         </div>
       </div>

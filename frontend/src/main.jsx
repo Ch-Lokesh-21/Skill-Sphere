@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Courses from './components/Courses/Courses.jsx';
 import './index.css';
+import Courses from './components/Courses/Courses.jsx';
 import App from './App.jsx';
 import Home from './components/Home/Home.jsx';
 import AboutMe from './components/AboutMe/AboutMe.jsx';

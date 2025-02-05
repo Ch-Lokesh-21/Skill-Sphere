@@ -52,22 +52,25 @@ function Card(props) {
         ))}
       </div>
 
-      <div className="quizOption flex space-x-4">
+      <div className="quizOption flex space-x-4 items-center">
+        <p>
+          Click here to view attempt Quizzes
+        </p>
         <button
           onClick={() => getQuiz("easy")}
-          className="bg-black text-white px-3 py-1 rounded"
+          className="bg-black text-white px-3 py-1 rounded cursor-pointer"
         >
           Easy
         </button>
         <button
           onClick={() => getQuiz("medium")}
-          className="bg-black text-white px-3 py-1 rounded"
+          className="bg-black text-white px-3 py-1 rounded cursor-pointer"
         >
           Medium
         </button>
         <button
           onClick={() => getQuiz("hard")}
-          className="bg-black text-white px-3 py-1 rounded"
+          className="bg-black text-white px-3 py-1 rounded cursor-pointer"
         >
           Hard
         </button>
